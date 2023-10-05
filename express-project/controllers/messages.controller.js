@@ -1,5 +1,11 @@
+const path = require('path');
+
 function getMessages(req, res) {
-    res.send('<ul><li>Express delivery..</li></ul>');
+    res.render('messages', {
+        title: 'Messages to my friends',
+        friend: 'Eric Clapton',
+    })
+    // res.sendFile(path.join(__dirname, '..', 'public', 'images', 'postman.jpg'));
 }
 
 function postMessage(req, res) {
